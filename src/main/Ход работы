@@ -1,0 +1,9 @@
+1. Создать Dockerfile в корневой директории.
+    Файл, который описывает, как создать Docker-контейнер.
+
+2. pom.xml содержит плагин для Javadoc.
+
+3. Сборка Docker-контейнера.
+    docker build -t my-java-docs
+    docker run --rm -it my-java-docs
+    docker run --rm -v $(pwd)/docs:/app/target/site/apidocs -it my-java-docs
